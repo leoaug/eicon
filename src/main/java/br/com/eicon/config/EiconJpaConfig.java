@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.jndi.JndiTemplate;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -86,7 +85,6 @@ public class EiconJpaConfig {
 	}
 */
 	@Bean(name = Constantes.DATA_SOURCE_BEAN_EICON)
-	//@Primary
 	public DataSource dataSource() throws NamingException {
 		return (DataSource) new JndiTemplate().lookup("java:comp/env/" + jndiName);
     }

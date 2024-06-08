@@ -24,7 +24,6 @@ public class Constantes {
 	public static final String TRANSACTION_MANAGER_EICON = "transactionManagerEicon";
 	public static final String DATA_SOURCE_BEAN_EICON = "dataSourceEicon";
 	public static final String PERSISTENCE_UNIT_EICON = "eicon";
-	public static final String ENTITY_MANAGER_EICON = "entityManagerEicon";
 	public static final String PACKAGE_TO_SCAN_EICON = "br.com.eicon.model";
 	public static final String EICON_SCHEMA = "eicon";
 

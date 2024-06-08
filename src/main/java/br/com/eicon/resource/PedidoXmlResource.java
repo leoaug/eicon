@@ -2,29 +2,43 @@ package br.com.eicon.resource;
 
 import java.util.List;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+
 import br.com.eicon.model.Pedido;
 
 @RestController
-@RequestMapping("/api/xml/pedido")
+@RequestMapping("/api/xml/pedido/")
 public class PedidoXmlResource {
 
-	@PostMapping(consumes = "application/xml", produces = "application/xml")
-	public ResponseEntity<List<Pedido>> salvarPedidos(@RequestBody List<Pedido> pedidos) {
-		
-		return ResponseEntity.ok(pedidos);
+	@GetMapping("teste")
+	public ResponseEntity<?> teste (){
+		return ResponseEntity.ok("Ok");
 	}
 	
-	@PostMapping(value = "/api/users", consumes = "application/xml", produces = "application/xml")
-    public ResponseEntity<List<Pedido>> recuperarPedidos(@RequestBody List<Pedido> pedidos) {
-        // Process the user object as needed
-        // For demonstration, we just return the received user object
-        return ResponseEntity.status(HttpStatus.CREATED).body(pedidos);
-    }
+	@PostMapping(path="salvarPedidos")
+	public ResponseEntity<?> salvarPedidos(@RequestBody String pedidosXml) throws JsonMappingException, JsonProcessingException {
+      
+		XmlMapper xmlMapper = new XmlMapper();
+        
+        List<Pedido> pedidosWrapper = xmlMapper.readValue(pedidosXml, new TypeReference<List<Pedido>>() {});
+        //PedidosWrapper pedidosWrapper = xmlMapper.readValue(pedidosXml, PedidosWrapper.class);
+
+
+        // Access the list of pedidos
+        //List<Pedido> pedidos = pedidosWrapper.getPedidos();
+		
+		return ResponseEntity.ok(pedidosWrapper);
+	}
+	
+	
 }
