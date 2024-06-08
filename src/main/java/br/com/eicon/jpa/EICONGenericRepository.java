@@ -8,12 +8,12 @@ import java.util.Set;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import jakarta.persistence.criteria.Predicate; 
+import javax.persistence.criteria.Predicate; 
 
 
 @EnableTransactionManagement
 @Repository
-public abstract class EICONGenericRepository <T extends Serializable> extends BBTSGenericRepositoryImpl<T> {
+public abstract class EICONGenericRepository <T extends Serializable> extends EICONGenericRepositoryImpl<T> {
 
 	
 

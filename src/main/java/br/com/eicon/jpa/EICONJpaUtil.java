@@ -8,21 +8,21 @@ import org.jdal.beans.PropertyUtils;
 import org.springframework.beans.PropertyAccessor;
 import org.springframework.beans.PropertyAccessorFactory;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceUnitUtil;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Expression;
-import jakarta.persistence.criteria.Fetch;
-import jakarta.persistence.criteria.From;
-import jakarta.persistence.criteria.Join;
-import jakarta.persistence.criteria.Path;
-import jakarta.persistence.criteria.Predicate;
-import jakarta.persistence.criteria.Root;
-import jakarta.persistence.criteria.Selection;
-import jakarta.persistence.metamodel.Attribute;
-import jakarta.persistence.metamodel.CollectionAttribute;
-import jakarta.persistence.metamodel.EntityType;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceUnitUtil;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Expression;
+import javax.persistence.criteria.Fetch;
+import javax.persistence.criteria.From;
+import javax.persistence.criteria.Join;
+import javax.persistence.criteria.Path;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+import javax.persistence.criteria.Selection;
+import javax.persistence.metamodel.Attribute;
+import javax.persistence.metamodel.CollectionAttribute;
+import javax.persistence.metamodel.EntityType;
 /**
  * 
  * @author c1260311

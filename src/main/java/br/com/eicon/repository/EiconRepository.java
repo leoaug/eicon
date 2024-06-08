@@ -7,9 +7,9 @@ import org.springframework.transaction.annotation.Transactional;
 import br.com.eicon.constants.Constantes;
 import br.com.eicon.jpa.EICONClassUtil;
 import br.com.eicon.jpa.EICONGenericRepository;
-import jakarta.annotation.PostConstruct;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
+import javax.annotation.PostConstruct;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 
 @Transactional( value = Constantes.TRANSACTION_MANAGER_EICON)

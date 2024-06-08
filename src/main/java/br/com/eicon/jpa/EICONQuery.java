@@ -12,11 +12,11 @@ import java.util.Map;
 import java.util.Set;
 
 import br.com.eicon.constants.Constantes;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.Expression;
-import jakarta.persistence.criteria.Path;
-import jakarta.persistence.criteria.Predicate;
-import jakarta.persistence.criteria.Root;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.Expression;
+import javax.persistence.criteria.Path;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 
 
 
@@ -45,7 +45,7 @@ public class EICONQuery <T extends Serializable> {
 	private CriteriaBuilder cb;
 	private String canonicalName;
 	private Class <T> clazzCanonicalName;
-	private BBTSGenericRepositoryImpl <T> bbtsGenericDAOImpl;
+	private EICONGenericRepositoryImpl <T> bbtsGenericDAOImpl;
 	private List <Predicate> predicadosFilter;
 	private Object valueCorrigido;
 	
@@ -756,7 +756,7 @@ public class EICONQuery <T extends Serializable> {
 	}
 
 
-	public void setBbtsGenericDAOImpl(BBTSGenericRepositoryImpl<T> bbtsGenericDAOImpl) {
+	public void setBbtsGenericDAOImpl(EICONGenericRepositoryImpl<T> bbtsGenericDAOImpl) {
 		this.bbtsGenericDAOImpl = bbtsGenericDAOImpl;
 	}
 

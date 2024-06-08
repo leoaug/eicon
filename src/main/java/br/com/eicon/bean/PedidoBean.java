@@ -9,7 +9,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Pedidos {
+public class PedidoBean {
 	
 	 private Integer numeroControle;
 	 

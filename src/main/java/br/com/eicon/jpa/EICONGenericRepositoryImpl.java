@@ -13,17 +13,17 @@ import java.util.Set;
 import com.google.common.collect.Sets;
 
 import br.com.eicon.constants.Constantes;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.Query;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Expression;
-import jakarta.persistence.criteria.Order;
-import jakarta.persistence.criteria.Path;
-import jakarta.persistence.criteria.Predicate;
-import jakarta.persistence.criteria.Root;
-import jakarta.persistence.metamodel.SingularAttribute;
-import jakarta.transaction.Transactional;
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Expression;
+import javax.persistence.criteria.Order;
+import javax.persistence.criteria.Path;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.transaction.Transactional;
 
 
 
@@ -32,7 +32,7 @@ import jakarta.transaction.Transactional;
  * @version 3.0
  * @param <T> generics do java para fazer cast com as Entidades
  */
-public abstract class BBTSGenericRepositoryImpl <T extends Serializable> implements EICONInterfaceGenericRepository<T>  {
+public abstract class EICONGenericRepositoryImpl <T extends Serializable> implements EICONInterfaceGenericRepository<T>  {
 
 	private EntityManager em;
 	
@@ -1233,7 +1233,7 @@ public abstract class BBTSGenericRepositoryImpl <T extends Serializable> impleme
 
 
 
-	protected BBTSGenericRepositoryImpl <T> getBbtsGenericDAOImpl() {
+	protected EICONGenericRepositoryImpl <T> getBbtsGenericDAOImpl() {
 		return this;
 	}
 

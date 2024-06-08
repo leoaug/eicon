@@ -22,7 +22,7 @@ import org.reflections.ReflectionUtils;
 
 import com.google.common.collect.Lists;
 
-import jakarta.persistence.Transient;
+import javax.persistence.Transient;
 
 
 public class EICONObjetoUtil <T extends Serializable> {
