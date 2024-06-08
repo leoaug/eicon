@@ -1,0 +1,18 @@
+<Pedidos>	
+	<Pedido>
+	    <id>1</id>
+	    <numeroControle>1234</numeroControle>
+	    <Cliente>
+	    	<id>1</id>
+	    	<nome>João CArlos</nome>	    	
+	    </Cliente>
+	    
+	    <Produtos>
+	    	<id>1</id>
+	    	<nome>nome</nome>
+	    	<valor>valor</valor>
+	    	<quantidade>2</quantidade>
+	    </Produtos>
+	    
+	</Pedido>
+</Pedidos>
