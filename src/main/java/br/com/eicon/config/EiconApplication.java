@@ -30,7 +30,7 @@ public class EiconApplication {
 
 	@Value("${spring.datasource.driver-class-name}")
 	private String driverClassName;
-	
+	 
 	@Value("${spring.datasource.username}")
 	private String usuario;
 	
