@@ -1,3 +1,20 @@
 {
-		
+	"pedidos" : [
+		{
+			"numeroControle" : 1234,
+	        "dataCadastro": "04/05/2024 11:20",
+	        "nomeProduto":"Calça Jeans",
+	        "valor":224.7,
+	        "quantidade":2,
+	        "codigoCliente":1
+		},
+		{
+			"numeroControle" : 4234,
+	        "dataCadastro": "08/07/2024 11:20",
+	        "nomeProduto":"Relógio",
+	        "valor":1224.7,
+	        "quantidade":2,
+	        "codigoCliente":2
+		}
+	]		
 }

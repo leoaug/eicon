@@ -1,41 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Pedidos>
-	<Pedido>
-		    <id>1</id>
-		    <numeroControle>1234</numeroControle>
-		    <Cliente>
-		    	<id>1</id>
-		    	<nome>João CArlos</nome>	    	
-		    </Cliente>    
-		    
-	        <Produto>
-	            <id>1</id>
-	            <nome>nome</nome>
-	            <valor>valor</valor>
-	            <quantidade>2</quantidade>
-	        </Produto>
-	        
-	        <Produto>
-	            <id>1</id>
-	            <nome>nome</nome>
-	            <valor>valor</valor>
-	            <quantidade>2</quantidade>
-	        </Produto>
-	 </Pedido>
-	 
-	 <Pedido>
-		    <id>1</id>
-		    <numeroControle>1234</numeroControle>
-		    <Cliente>
-		    	<id>1</id>
-		    	<nome>João CArlos</nome>	    	
-		    </Cliente>    
-		    
-	        <Produto>
-	            <id>1</id>
-	            <nome>nome</nome>
-	            <valor>valor</valor>
-	            <quantidade>2</quantidade>
-	        </Produto>
-	 </Pedido>
+    <Pedido>
+        <numeroControle>1234</numeroControle>
+        <dataCadastro>04/05/2024 11:20</dataCadastro>
+        <nomeProduto>Ccalça Jeans</nomeProduto>
+        <valor>224.7</valor>
+        <quantidade>2</quantidade>
+        <codigoCliente>1</codigoCliente>    
+    </Pedido>
+     <Pedido>
+        <numeroControle>4234</numeroControle>
+        <dataCadastro>08/07/2024 11:20</dataCadastro>
+        <nomeProduto>Relógio</nomeProduto>
+        <valor>1224.7</valor>
+        <quantidade>2</quantidade>
+        <codigoCliente>2</codigoCliente>    
+    </Pedido>
 </Pedidos>

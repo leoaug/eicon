@@ -13,28 +13,28 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import br.com.eicon.bean.Pedidos;
 import br.com.eicon.exception.EiconException;
 import jakarta.xml.bind.JAXBException;
 
 @RestController
-@RequestMapping("/api/xml/pedido/")
-public class PedidoXmlResource {
+@RequestMapping("/api/json/pedido/")
+public class PedidoJsonResource {
 
 	@GetMapping("teste")
 	public ResponseEntity<?> teste() {
 		return ResponseEntity.ok("Ok");
 	}
 
-	@PostMapping(path = "salvarPedidos", produces = "application/xml", consumes = "application/xml")
-	public ResponseEntity<?> salvarPedidos(@RequestBody String pedidosXml)
+	@PostMapping(value = "salvarPedidos", produces = "application/json", consumes = "application/json")
+	public ResponseEntity<?> salvarPedidos(@RequestBody String pedidosJson)
 			throws JsonMappingException, JsonProcessingException, JAXBException {
 
-		XmlMapper xmlMapper = new XmlMapper();
-
-		List<Pedidos> pedidosWrapper = xmlMapper.readValue(pedidosXml, new TypeReference<List<Pedidos>>() {
+		ObjectMapper jsonMapper = new ObjectMapper();
+		
+		List<Pedidos> pedidosWrapper = jsonMapper.readValue(pedidosJson, new TypeReference<List<Pedidos>>() {
 		});
 	
 		
@@ -42,7 +42,7 @@ public class PedidoXmlResource {
 			 return new ResponseEntity<>(new EiconException("Quantidade Máxima excedida de pedidos, máximo 10"),
 					 HttpStatus.BAD_REQUEST);
 		} else {
-			return ResponseEntity.ok(pedidosWrapper);
+			return ResponseEntity.ok(pedidosJson);
 
 		}
 
